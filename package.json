@@ -26,6 +26,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "serve": "serve -s build",
+    "serve:prod": "NODE_ENV=production npm run serve",
+    "serve:lhci": "npm run serve:prod",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
