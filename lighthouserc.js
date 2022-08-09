@@ -3,7 +3,7 @@ module.exports = {
     collect: {
       numberOfRuns: 3,
       startServerCommand: 'serve:lhci',
-      startServerReadyPattern: 'Accepting connections at http://localhost:3000',
+      startServerReadyPattern: 'serving',
       url: ['http://localhost:3000/portfolio'],
       settings: {
         onlyCategories: [
