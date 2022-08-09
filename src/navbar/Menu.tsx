@@ -11,7 +11,12 @@ const Menu: React.FC = () => {
 
   return (
     <>
-      <button className="md:hidden" onClick={toggleMenu}>
+      <button
+        aria-label="Navigation menu"
+        aria-expanded={isMenuOpened ? 'true' : 'false'}
+        className="md:hidden"
+        onClick={toggleMenu}
+      >
         <FontAwesomeIcon size="2x" icon={faBars} />
       </button>
       {/* TODO check for animation */}
