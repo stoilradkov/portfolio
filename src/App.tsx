@@ -5,6 +5,7 @@ import Education from './education/Education'
 import Experience from './experience/Experience'
 import Home from './home/Home'
 import Navbar from './navbar/Navbar'
+import NotFound from './notFound/NotFound'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/education" element={<Education />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
     </BrowserRouter>
