@@ -3,7 +3,8 @@ module.exports = {
     collect: {
       numberOfRuns: 3,
       staticDistDir: './build',
-      url: ['http://localhost/portfolio'],
+      isSinglePageApplication: true,
+      url: ['http://localhost'],
       settings: {
         onlyCategories: [
           'performance',

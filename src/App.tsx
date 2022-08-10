@@ -8,7 +8,7 @@ import Navbar from './navbar/Navbar'
 
 function App() {
   return (
-    <BrowserRouter basename="/portfolio">
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
