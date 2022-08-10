@@ -19,7 +19,6 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
-    "serve": "^14.0.1",
     "typescript": "^4.7.4",
     "web-vitals": "^2.1.4"
   },
@@ -27,9 +26,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "serve": "serve -s build",
-    "serve:prod": "NODE_ENV=production npm run serve",
-    "serve:lhci": "npm run serve:prod",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
