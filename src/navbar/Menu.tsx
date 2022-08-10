@@ -12,8 +12,8 @@ const Menu: React.FC = () => {
   return (
     <>
       <button
-        // aria-label="Navigation menu"
-        // aria-expanded={isMenuOpened ? 'true' : 'false'}
+        aria-label="Navigation menu"
+        aria-expanded={isMenuOpened ? 'true' : 'false'}
         className="md:hidden"
         onClick={toggleMenu}
       >
