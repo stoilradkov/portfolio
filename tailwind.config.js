@@ -7,11 +7,17 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
+        sans: ['Fredoka', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         primary: {
-          main: colors.amber[500],
+          main: colors.emerald[500],
+          secondary: colors.emerald[400],
+        },
+        text: {
+          main: colors.gray[500],
+          secondary: colors.gray[400],
+          dark: colors.black,
         },
       },
     },
