@@ -9,7 +9,7 @@ const MenuItems: React.FC<Props> = ({ routes }) => {
   const { pathname } = useLocation()
 
   return (
-    <ul className="flex flex-col md:flex-row items-center gap-y-5 md:gap-10 py-10 md:py-0">
+    <ul className="flex flex-col lg:flex-row items-center gap-y-5 lg:gap-10 py-10 lg:py-0">
       {routes.map((route) => (
         <li className="text-lg" key={route.title}>
           {route.to === '/contact' ? (
