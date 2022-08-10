@@ -14,13 +14,13 @@ const Menu: React.FC = () => {
       <button
         aria-label="Navigation menu"
         aria-expanded={isMenuOpened ? 'true' : 'false'}
-        className="md:hidden"
+        className="lg:hidden"
         onClick={toggleMenu}
       >
         <FontAwesomeIcon size="2x" icon={faBars} />
       </button>
       <nav
-        className={`flex md:flex flex-col basis-full md:basis-auto flex-grow md:flex-grow-0 ${
+        className={`flex lg:flex flex-col basis-full lg:basis-auto flex-grow lg:flex-grow-0 ${
           isMenuOpened ? '' : 'hidden'
         }`}
       >
