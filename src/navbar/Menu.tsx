@@ -19,7 +19,6 @@ const Menu: React.FC = () => {
       >
         <FontAwesomeIcon size="2x" icon={faBars} />
       </button>
-      {/* TODO check for animation */}
       <nav
         className={`flex md:flex flex-col basis-full md:basis-auto flex-grow md:flex-grow-0 ${
           isMenuOpened ? '' : 'hidden'
