@@ -12,16 +12,18 @@ const Introduction: React.FC = () => {
         A software enginner specializing in full stack web development as well
         as cloud applications.
       </p>
-      <div aria-roledescription="Social media accounts" className=" flex gap-4">
+      <div aria-roledescription="Social media accounts" className="flex gap-4">
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://www.linkedin.com/in/stoil-radkov-278361156/"
           className="inline-block"
         >
-          <img className="w-12 h-12" src={linkedin} alt="linkedin logo" />
+          <img className="w-14 h-12" src={linkedin} alt="linkedin logo" />
         </a>
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://github.com/stoilradkov"
           className="inline-block"
         >

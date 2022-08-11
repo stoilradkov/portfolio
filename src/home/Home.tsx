@@ -1,12 +1,16 @@
 import Introduction from './Introduction'
-import logo from '../assets/transparent-logo.png'
+import me from '../assets/me.png'
 
 const Home: React.FC = () => {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2">
+    <section className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-10">
       <Introduction />
-      <article className="bg-red-500">
-        <img src={logo} className="w-96 h-96" alt="logo" />
+      <article className="place-self-center">
+        <img
+          src={me}
+          className="w-[460px] h-[400px] hover:scale-110 transition duration-1000 delay-100"
+          alt="Stoil Radkov"
+        />
       </article>
     </section>
   )

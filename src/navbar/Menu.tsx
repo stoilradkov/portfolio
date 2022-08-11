@@ -1,3 +1,4 @@
+import clsx from 'classnames'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react'
@@ -20,9 +21,12 @@ const Menu: React.FC = () => {
         <FontAwesomeIcon size="2x" icon={faBars} />
       </button>
       <nav
-        className={`flex lg:flex flex-col basis-full lg:basis-auto flex-grow lg:flex-grow-0 ${
-          isMenuOpened ? '' : 'hidden'
-        }`}
+        className={clsx(
+          'flex lg:flex flex-col basis-full lg:basis-auto flex-grow lg:flex-grow-0',
+          {
+            hidden: isMenuOpened,
+          },
+        )}
       >
         <MenuItems routes={ROUTES} />
       </nav>
