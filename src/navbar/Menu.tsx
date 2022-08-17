@@ -23,8 +23,10 @@ const Menu: React.FC = () => {
       <nav
         className={clsx(
           'flex lg:flex flex-col basis-full lg:basis-auto flex-grow lg:flex-grow-0',
+          'border-b border-b-solid border-b-slate-200',
+          'lg:border-0',
           {
-            hidden: isMenuOpened,
+            hidden: !isMenuOpened,
           },
         )}
       >
