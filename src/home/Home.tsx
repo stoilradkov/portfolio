@@ -8,6 +8,8 @@ const Home: React.FC = () => {
       <article className="place-self-center rounded-2xl w-[666px] h-[375px] lg:w-auto lg:h-auto">
         <img
           src={me}
+          width="666px"
+          height="375px"
           className="lg:w-[666px] lg:h-[375px] object-contain lg:object-none hover:scale-110 transition duration-1000 delay-100 rounded-2xl"
           alt="Stoil Radkov"
         />
