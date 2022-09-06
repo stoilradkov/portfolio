@@ -1,4 +1,4 @@
-import Badge from '../common/Badge'
+import Badge from '../common/components/Badge'
 
 export interface Props {
   technologies: string[]
