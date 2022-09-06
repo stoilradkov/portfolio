@@ -45,7 +45,7 @@ const Timeline: React.FC<Props> = ({ reversed, isFirst, isLast, job }) => {
       >
         {jobElement}
       </div>
-      <Road leftOffset={12} topOffset={22} isFirst={isFirst} isLast={isLast} />
+      <Road isFirst={isFirst} isLast={isLast} />
     </div>
   )
 }
