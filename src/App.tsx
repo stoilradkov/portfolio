@@ -1,4 +1,4 @@
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import About from './about/About'
 import Contact from './contact/Contact'
 import Education from './education/Education'
@@ -9,7 +9,7 @@ import NotFound from './notFound/NotFound'
 
 function App() {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Navbar />
       <main className="px-4 md:px-10">
         <Routes>
@@ -21,7 +21,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
-    </HashRouter>
+    </BrowserRouter>
   )
 }
 
