@@ -1,0 +1,69 @@
+[
+    {
+        "time": "Dec 2021 - Present",
+        "title": "Full stack engineer @ IBM",
+        "projects": [
+            {
+              "title": "DI Analytical Platform",
+              "description":
+                "ease clients in retrieving and processing large amounts of data"
+            },
+            {
+              "title": "BP Polaris",
+              "description":
+                "provide a web app which pricing analysts use to track and manage gas prices on sites in over 13 countries"
+            }
+          ],
+          "technologies": [
+            "Node.js",
+            "Typescript",
+            "React",
+            "Redux",
+            "PostgreSQL",
+            "AWS",
+            "Serverless",
+            "MUI",
+            "Cypress"
+          ]
+
+    },
+    {
+        "time": "Dec 2019 - Nov 2021",
+        "title": "Full stack engineer @ Novarto Ltd.",
+        "projects": [
+            {
+              "title": "SAP X4 Business Configurator",
+              "description":
+                "A cloud based service with which customers can order and configure new products quickly"
+            }
+          ],
+          "technologies": [
+            "Node.js",
+            "Typescript",
+            "React",
+            "Redux",
+            "PostgreSQL",
+            "React-strap"
+          ]
+
+    },
+    {
+        "time": "Jan 2019 - Nov 2019",
+        "title": "Backend engineer @ x8academy",
+        "projects": [
+            {
+              "title": "Your Receipts",
+              "description":
+                "A mobile app and a web service to extract data from receipts in order to collect information and create artificial intelligence models which predict future prices and discounts of various groceries and other everyday purchases"
+            }
+          ],
+          "technologies": [
+            "Java",
+            "Typescript",
+            "React",
+            "Redux",
+            "PostgreSQL"
+          ]
+
+    }
+]
