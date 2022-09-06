@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Navbar />
-      <main className="px-10">
+      <main className="px-4 md:px-10">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
