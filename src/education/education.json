@@ -1,0 +1,29 @@
+{
+    "education": [
+        {
+            "title": "Bsc in Computing, Computer Science, 2017-2021",
+            "summary":"Sofia University “St. Kliment Ohridski”, Bulgaria, GPA: 5.73/6",
+            "description": "Courses: Programming Basics of C++, Discrete mathematics, Design and analysis of algorithms, Data structures, Functional programming, Automata Theory, Linear Algebra, Clean Code, Web Technologies"
+        },
+        {
+            "title": "Practical Computer Science course",
+            "summary":"x8academy, 06/2018 - 11/2018",
+            "description": "Full-time school, covering topics like: Version control systems, Unit testing, Code reviews, Data structures and algorithms, Java collections framework, OOP, Exceptions, Multithreading"
+        },
+        {
+            "title": "Mathematics & English language, Graduation Year 2017",
+            "summary":"Model High School of Mathematics “Acad. Kiril Popov”, Bulgaria, GPA: 5.84/6",
+            "description": "Participant in many mathematical Olympiads, participant in Mathematics club"
+        }
+    ],
+    "certificates": [
+        {
+            "title":"AWS Certified Developer - Associate - Jan 21, 2022/Jan 21, 2025",
+            "summary":"Validation Number: WBW00GBJHEREQB3N"
+        },
+        {
+            "title":"AWS Certified Solutions Architect - Associate - Jul 20, 2022/Jul 20, 2025",
+            "summary":"Validation Number: 880SGYSCQN14QPGL"
+        }
+    ]
+}
