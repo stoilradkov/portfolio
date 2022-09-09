@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportfolio=self.webpackChunkportfolio||[]).push([[902],{330:function(t,a,e){e.r(a),e.d(a,{default:function(){return c}});var n=e.p+"static/media/me_bg.7b72ea4a58a71aada1cc.png",o=e(184),c=function(){return(0,o.jsx)("img",{src:n,width:"666px",height:"375px",className:"lg:w-[666px] lg:h-[375px] object-contain lg:object-none",alt:"Stoil Radkov"})}}}]);
+//# sourceMappingURL=902.fd571132.chunk.js.map
