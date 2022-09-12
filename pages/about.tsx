@@ -1,6 +1,11 @@
+import Head from 'next/head'
+
 const About: React.FC = () => {
   return (
     <>
+      <Head>
+        <title>About Stoil Radkov</title>
+      </Head>
       <div className="h-1 w-1/2 rounded-lg m-auto animate-pulse bg-primary-main" />
       <section className="px-10 mt-10 mb-10 grid grid-cols-1 lg:grid-cols-2 lg:gap-x-56">
         <article className="">

@@ -9,8 +9,8 @@ export type EmailParams = {
 
 export const sendEmail = async (emailParams: EmailParams) =>
   emailClient.send(
-    process.env.REACT_APP_EMAIL_CLIENT_SERVICE_ID ?? '',
-    process.env.REACT_APP_EMAIL_CLIENT_TEMPLATE_ID ?? '',
+    process.env.NEXT_PUBLIC_EMAIL_CLIENT_SERVICE_ID ?? '',
+    process.env.NEXT_PUBLIC_EMAIL_CLIENT_TEMPLATE_ID ?? '',
     emailParams,
-    process.env.REACT_APP_EMAIL_CLIENT_PUBLIC_KEY ?? '',
+    process.env.NEXT_PUBLIC_EMAIL_CLIENT_PUBLIC_KEY ?? '',
   )

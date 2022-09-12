@@ -1,10 +1,15 @@
+import Head from 'next/head'
 import { useEffect, useState } from 'react'
-import { withError } from '../common/components/error/withError'
-import Input from '../common/components/Input'
-import Textarea from '../common/components/Textarea'
-import { sendEmail as doSendEmail } from '../services/email'
-import { ButtonState, Field, SubmitState } from './Contact.type'
-import SendButton from './SendButton'
+import { withError } from '../components/common/error/withError'
+import Input from '../components/common/Input'
+import Textarea from '../components/common/Textarea'
+import {
+  ButtonState,
+  Field,
+  SubmitState,
+} from '../components/contact/Contact.type'
+import SendButton from '../components/contact/SendButton'
+import { sendEmail as doSendEmail } from '../utils/services/email'
 
 const Contact: React.FC = () => {
   const [name, setName] = useState<Field>({ value: '', error: null })
@@ -136,67 +141,72 @@ const Contact: React.FC = () => {
     message ? <p className={className}>{message}</p> : null
 
   return (
-    <section className="m-auto w-full md:w-3/4 lg:w-2/3 mb-6">
-      <h2 className="text-5xl text-primary-main mb-10">Get in touch</h2>
-      <form onSubmit={submitHandler}>
-        <div
-          aria-roledescription="Row input wrapper"
-          className="flex flex-col sm:flex-row w-full sm:space-x-5 space-y-5 sm:space-y-0 mb-5"
-        >
+    <>
+      <Head>
+        <title>Let&apos;s chat</title>
+      </Head>
+      <section className="m-auto w-full md:w-3/4 lg:w-2/3 mb-6">
+        <h2 className="text-5xl text-primary-main mb-10">Get in touch</h2>
+        <form onSubmit={submitHandler}>
+          <div
+            aria-roledescription="Row input wrapper"
+            className="flex flex-col sm:flex-row w-full sm:space-x-5 space-y-5 sm:space-y-0 mb-5"
+          >
+            {withError(
+              <Input
+                name="name"
+                type="text"
+                value={name.value}
+                onChange={changeHandler}
+                className="w-full"
+                placeholder="Your name"
+                aria-required={true}
+              />,
+              createMessage(name.error, 'text-red-500'),
+              'w-full sm:w-1/2',
+            )}
+            {withError(
+              <Input
+                name="email"
+                type="email"
+                value={email.value}
+                onChange={changeHandler}
+                className="w-full"
+                placeholder="Your email"
+                aria-required={true}
+              />,
+              createMessage(email.error, 'text-red-500'),
+              'w-full sm:w-1/2',
+            )}
+          </div>
           {withError(
             <Input
-              name="name"
+              name="subject"
               type="text"
-              value={name.value}
+              value={subject.value}
               onChange={changeHandler}
               className="w-full"
-              placeholder="Your name"
+              placeholder="Your subject"
               aria-required={true}
             />,
-            createMessage(name.error, 'text-red-500'),
-            'w-full sm:w-1/2',
+            createMessage(subject.error, 'text-red-500'),
+            'mb-5',
           )}
-          {withError(
-            <Input
-              name="email"
-              type="email"
-              value={email.value}
-              onChange={changeHandler}
-              className="w-full"
-              placeholder="Your email"
-              aria-required={true}
-            />,
-            createMessage(email.error, 'text-red-500'),
-            'w-full sm:w-1/2',
-          )}
-        </div>
-        {withError(
-          <Input
-            name="subject"
-            type="text"
-            value={subject.value}
+          <Textarea
+            name="message"
+            value={message.value}
             onChange={changeHandler}
-            className="w-full"
-            placeholder="Your subject"
-            aria-required={true}
-          />,
-          createMessage(subject.error, 'text-red-500'),
-          'mb-5',
-        )}
-        <Textarea
-          name="message"
-          value={message.value}
-          onChange={changeHandler}
-          className="w-full mb-5 h-52"
-          placeholder="Your message"
-        />
-        <SendButton
-          isLoading={submitState.buttonState === ButtonState.LOADING}
-        />
-        {createMessage(submitState.error, 'text-red-500')}
-        {createMessage(submitState.success, 'text-primary-main')}
-      </form>
-    </section>
+            className="w-full mb-5 h-52"
+            placeholder="Your message"
+          />
+          <SendButton
+            isLoading={submitState.buttonState === ButtonState.LOADING}
+          />
+          {createMessage(submitState.error, 'text-red-500')}
+          {createMessage(submitState.success, 'text-primary-main')}
+        </form>
+      </section>
+    </>
   )
 }
 

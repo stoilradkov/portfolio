@@ -2,7 +2,7 @@ module.exports = {
   ci: {
     collect: {
       numberOfRuns: 3,
-      staticDistDir: './build',
+      staticDistDir: './out',
       isSinglePageApplication: true,
       url: ['http://localhost'],
       settings: {
