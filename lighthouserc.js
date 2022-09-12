@@ -2,9 +2,8 @@ module.exports = {
   ci: {
     collect: {
       numberOfRuns: 3,
-      staticDistDir: './out',
-      isSinglePageApplication: true,
-      url: ['http://localhost'],
+      url: ['http://localhost:3000'],
+      startServerCommand: 'npm start',
       settings: {
         onlyCategories: [
           'performance',
