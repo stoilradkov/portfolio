@@ -1,3 +1,14 @@
-# My portfolio
+# Portfolio
 
-This repository contains the source code of my portfolio website.
+This repository contains the source code of my portfolio website. [Check it out](https://portfolio-o2f8epqxn-stoilradkov.vercel.app/).
+Technologies used:
+
+- Next.js (with Typescript)
+- TailwindCSS
+
+## Installation
+
+```bash
+npm install foobar
+npm run dev
+```

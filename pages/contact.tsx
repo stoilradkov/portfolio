@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import clsx from 'classnames'
 import { useEffect, useState } from 'react'
 import { withError } from '../components/common/error/withError'
 import Input from '../components/common/Input'
@@ -145,12 +146,15 @@ const Contact: React.FC = () => {
       <Head>
         <title>Let&apos;s chat</title>
       </Head>
-      <section className="m-auto w-full md:w-3/4 lg:w-2/3 mb-6">
+      <section className={clsx('m-auto w-full mb-6', 'md:w-3/4', 'lg:w-2/3')}>
         <h2 className="text-5xl text-primary-main mb-10">Get in touch</h2>
         <form onSubmit={submitHandler}>
           <div
             aria-roledescription="Row input wrapper"
-            className="flex flex-col sm:flex-row w-full sm:space-x-5 space-y-5 sm:space-y-0 mb-5"
+            className={clsx(
+              'flex flex-col w-full mb-5 space-y-5',
+              'sm:flex-row sm:space-x-5 sm:space-y-0',
+            )}
           >
             {withError(
               <Input
