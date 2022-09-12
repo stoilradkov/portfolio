@@ -9,6 +9,6 @@ Technologies used:
 ## Installation
 
 ```bash
-npm install foobar
+npm install
 npm run dev
 ```
