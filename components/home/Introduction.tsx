@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import linkedin from '../../public/linkedin.png'
 import github from '../../public/github.png'
-import { imageLoader } from '../../utils/loader/loader'
 
 const Introduction: React.FC = () => {
   return (
@@ -24,13 +23,7 @@ const Introduction: React.FC = () => {
           href="https://www.linkedin.com/in/stoil-radkov-278361156/"
           className="inline-block"
         >
-          <Image
-            loader={imageLoader}
-            src={linkedin}
-            alt="linkedin logo"
-            width={56}
-            height={48}
-          />
+          <Image src={linkedin} alt="linkedin logo" width={56} height={48} />
         </a>
         <a
           target="_blank"
@@ -38,13 +31,7 @@ const Introduction: React.FC = () => {
           href="https://github.com/stoilradkov"
           className="inline-block"
         >
-          <Image
-            loader={imageLoader}
-            src={github}
-            alt="github logo"
-            width={48}
-            height={48}
-          />
+          <Image src={github} alt="github logo" width={48} height={48} />
         </a>
       </div>
     </article>
