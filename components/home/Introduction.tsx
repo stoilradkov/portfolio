@@ -5,7 +5,9 @@ import github from '../../public/github.png'
 const Introduction: React.FC = () => {
   return (
     <article className="self-end text-center">
-      <h2 className="mb-3 lg:text-7xl font-semibold text-5xl">Hello! I am</h2>
+      <h2 className="mb-3 lg:text-7xl font-semibold text-5xl">
+        Hello! I am testing
+      </h2>
       <h1 className="text-7xl font-semibold mb-8 text-primary-main">
         Stoil Radkov
       </h1>
