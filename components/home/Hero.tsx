@@ -10,7 +10,6 @@ const Hero: React.FC = () => {
       width={666}
       height={375}
       layout="intrinsic"
-      //   className="lg:w-[666px] lg:h-[375px] object-contain lg:object-none"
       alt="Stoil Radkov"
     />
   )
