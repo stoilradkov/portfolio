@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 800" fill="none">
+  <rect width="640" height="800" rx="48" fill="#F4F8FC" />
+  <rect x="40" y="40" width="560" height="720" rx="36" fill="#EDF4FA" stroke="#D2E0EC" />
+  <circle cx="320" cy="285" r="118" fill="#D3E4F4" />
+  <path
+    d="M151 651C151 563.739 221.739 493 309 493H331C418.261 493 489 563.739 489 651V670H151V651Z"
+    fill="#C1D6EA"
+  />
+  <path
+    d="M215 722C240.222 748.667 276.333 762 320 762C363.667 762 399.778 748.667 425 722"
+    stroke="#7A93AC"
+    stroke-width="14"
+    stroke-linecap="round"
+  />
+  <text x="320" y="118" text-anchor="middle" fill="#54718E" font-size="28" font-family="Arial, sans-serif">
+    Drop your avatar into /public/assets
+  </text>
+</svg>
+

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#F6FAFD" />
+  <circle cx="1060" cy="70" r="190" fill="#E7F1FA" />
+  <circle cx="40" cy="600" r="260" fill="#ECF4FB" />
+  <rect x="74" y="70" width="1052" height="490" rx="36" fill="white" stroke="#D7E3EF" />
+  <text x="120" y="220" fill="#304B67" font-size="34" font-family="Arial, sans-serif">Stoil Radkov</text>
+  <text x="120" y="320" fill="#102338" font-size="76" font-family="Arial, sans-serif" font-weight="700">
+    Senior JavaScript
+  </text>
+  <text x="120" y="404" fill="#102338" font-size="76" font-family="Arial, sans-serif" font-weight="700">
+    Full-Stack Developer
+  </text>
+  <text x="120" y="480" fill="#4D6177" font-size="28" font-family="Arial, sans-serif">
+    Reliable business software. Calm delivery. Product-minded execution.
+  </text>
+</svg>
+

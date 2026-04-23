@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" fill="none">
+  <rect width="1200" height="720" rx="40" fill="#F6FAFD" />
+  <rect x="54" y="54" width="1092" height="612" rx="28" fill="white" stroke="#D6E4F0" />
+  <rect x="110" y="118" width="980" height="70" rx="18" fill="#EDF4FA" />
+  <rect x="110" y="230" width="280" height="370" rx="22" fill="#F5F9FC" stroke="#D9E6F2" />
+  <rect x="430" y="230" width="280" height="370" rx="22" fill="#F5F9FC" stroke="#D9E6F2" />
+  <rect x="750" y="230" width="280" height="370" rx="22" fill="#EAF3FA" stroke="#C8DBEC" />
+  <path d="M270 294H229V331H270V294Z" fill="#A8C8E4" />
+  <path d="M590 294H549V331H590V294Z" fill="#A8C8E4" />
+  <path d="M910 294H869V331H910V294Z" fill="#86B0D8" />
+  <text x="110" y="664" fill="#415A72" font-size="30" font-family="Arial, sans-serif">
+    Placeholder visual for the insurance workflow portal case study
+  </text>
+</svg>
+

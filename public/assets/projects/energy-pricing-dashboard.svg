@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" fill="none">
+  <rect width="1200" height="720" rx="40" fill="#F5FAFD" />
+  <rect x="54" y="54" width="1092" height="612" rx="28" fill="white" stroke="#D6E4F0" />
+  <rect x="110" y="118" width="980" height="66" rx="18" fill="#EDF4FA" />
+  <rect x="110" y="226" width="930" height="144" rx="24" fill="#EEF5FB" stroke="#D0E1EF" />
+  <rect x="110" y="402" width="448" height="198" rx="24" fill="#F5F9FC" stroke="#D9E6F2" />
+  <rect x="592" y="402" width="448" height="198" rx="24" fill="#EAF3FA" stroke="#C8DBEC" />
+  <path d="M176 310H973" stroke="#A8C8E4" stroke-width="18" stroke-linecap="round" />
+  <path d="M176 484H488" stroke="#A8C8E4" stroke-width="18" stroke-linecap="round" />
+  <path d="M176 534H418" stroke="#C0D7EB" stroke-width="18" stroke-linecap="round" />
+  <path d="M658 520L740 470L804 496L864 432L956 450" stroke="#7EAAD5" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="110" y="664" fill="#415A72" font-size="30" font-family="Arial, sans-serif">
+    Placeholder visual for the energy pricing dashboard case study
+  </text>
+</svg>
+
