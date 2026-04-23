@@ -65,15 +65,6 @@ Update these areas there:
 - experience highlights
 - project summaries and case study details
 
-## Assets to replace
-
-Before going live, replace or add:
-
-- [`public/assets/avatar-placeholder.svg`](/C:/Users/StoilRadkov/Training/portfolio/public/assets/avatar-placeholder.svg) with your real avatar image, then update `siteContent.avatar.src` if the filename changes.
-- `public/assets/Stoil-Radkov-Resume.pdf` with your actual resume PDF.
-- project placeholder visuals in [`public/assets/projects`](/C:/Users/StoilRadkov/Training/portfolio/public/assets/projects) if you want safer real screenshots or blurred/mock visuals.
-- [`public/assets/og-cover.svg`](/C:/Users/StoilRadkov/Training/portfolio/public/assets/og-cover.svg) if you want a custom social sharing image.
-
 ## GitHub Pages deployment
 
 The repo already includes [`deploy.yml`](/C:/Users/StoilRadkov/Training/portfolio/.github/workflows/deploy.yml).
@@ -83,20 +74,10 @@ Deployment steps:
 1. Push this project to GitHub.
 2. In the repository settings, open `Pages`.
 3. Under `Build and deployment`, choose `GitHub Actions`.
-4. Push to `main`, or run the workflow manually from the Actions tab.
+4. Push to `master` or `main`, or run the workflow manually from the Actions tab.
 
 Base path handling:
 
 - If the repo is a project repo like `https://github.com/<user>/<repo>`, the build automatically uses `/<repo>/`.
 - If the repo is a user site like `<user>.github.io`, the build uses `/`.
 - If you later move to a custom domain, you can set `VITE_BASE_PATH=/` if needed.
-
-## Suggested live content checklist
-
-- real avatar image
-- final resume PDF
-- safe project screenshots or upgraded placeholders
-- optional refined one-line bio
-- optional testimonials if any become public-safe
-- favicon and OG image refresh
-
