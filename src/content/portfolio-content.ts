@@ -117,7 +117,7 @@ export const siteContent = {
     'Dashboards, workflows, permissions, audit trails',
   ],
   contact: {
-    title: "Tell me what you're building. Let's see if it's a fit.",
+    title: 'What are you building, and how can I help?',
     description:
       "If your team needs a reliable engineer for a product, workflow system, dashboard, or internal application, I'd be glad to take a look.",
     email: 'stoilradkov11@gmail.com',
