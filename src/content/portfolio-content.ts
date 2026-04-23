@@ -111,7 +111,7 @@ export const siteContent = {
     },
   ] satisfies Service[],
   credentials: [
-    'React, TypeScript, Node.js, NestJS',
+    'React, TypeScript, Next.js, Node.js, NestJS',
     'PostgreSQL, DynamoDB, REST APIs',
     'AWS, serverless architecture, Terraform',
     'Dashboards, workflows, permissions, audit trails',
@@ -132,21 +132,21 @@ export const experienceHighlights: ExperienceHighlight[] = [
   {
     period: '2021 - Present',
     role: 'Full-stack cloud application developer',
-    company: 'Global technology company',
+    company: 'IBM',
     summary:
       'Working across workflow portals, analytical platforms, and pricing operations software, with responsibilities spanning frontend delivery, backend structure, architecture decisions, and cloud implementation.',
   },
   {
     period: '2019 - 2021',
     role: 'Full-stack software engineer',
-    company: 'Enterprise software consultancy',
+    company: 'Novarto Ltd.',
     summary:
       'Built cloud software for configuration-heavy business products, including migration of older data models, product catalog logic, and end-to-end setup flows used by enterprise customers.',
   },
   {
     period: '2019',
     role: 'Backend software engineer',
-    company: 'Early-stage product team',
+    company: 'x8academy',
     summary:
       'Worked on backend services for receipt image upload, preprocessing, storage, and early data modeling in a product focused on extracting structured data from real-world purchase records.',
   },
@@ -158,32 +158,32 @@ export const projects: Project[] = [
     title: 'Insurance Data Quality Workflow Portal',
     eyebrow: 'Workflow system / compliance-aware operations',
     summary:
-      'A portal for managing data-quality issues, document evidence, multi-role review flows, and audit-ready resolution history in an insurance operations context.',
+      'A role-based workflow portal that replaced email and spreadsheets for running data-quality task batches, reviews, and operational follow-ups across an insurance organization.',
     challenge:
-      'The work required translating a complex issue-resolution process into software that could coordinate multiple operational roles, preserve traceability, and stay aligned with strict reporting and compliance expectations.',
+      'Before the portal existed, teams coordinated a few hundred data-quality tasks per day through emails and shared spreadsheets. With no enforced roles, permissions, or workflow state, work was hard to route, easy to lose track of, and difficult to monitor as tasks moved between operations and reviewers.',
     solution:
-      'I helped design and build the core full-stack foundation: workflow orchestration, role-based permissions, evidence and document handling, reassignment logic, peer review paths, and audit history tracking across the issue lifecycle.',
+      'I owned the frontend architecture and delivery: a structured, role-aware UI built around a clear task lifecycle. Daily task batches are imported from Excel, operations users work through assigned tasks, and two levels of SMEs review and either approve or reject outcomes (returning tasks when needed). The product also includes dashboards, admin statistics, and automated email notifications and reminders. I contributed to the backend APIs and data model to support the workflow and reporting.',
     impact:
-      'The result was a more structured and reliable system for handling high-impact data-quality work, with clearer ownership, better evidence management, and a stronger operational base for reporting readiness.',
-    role: 'Founding full-stack engineer',
+      'Replaced email + spreadsheets with a role-based workflow portal and clear visibility across the full lifecycle.',
+    role: 'Frontend lead / full-stack engineer',
     period: '2021 - Present',
     stack: ['React', 'TypeScript', 'NestJS', 'PostgreSQL', 'AWS', 'REST APIs'],
     categories: ['Workflow systems', 'Operations tooling'],
-    image: assetPath('/assets/projects/insurance-workflow-portal.svg'),
+    image: assetPath('/assets/projects/workflow.png'),
     overview: [
       'Anonymized case study based on NDA-bound work.',
-      'Built around multi-stage fail and query management, review handling, arbitration logic, and evidence tracking.',
-      'Designed to support operational clarity as well as audit and compliance needs.',
+      'Built around a multi-role workflow: Excel import → operations work → expert review → SME review.',
+      'Designed for clear permissions, visibility into progress, and audit-friendly traceability.',
     ],
     responsibilities: [
-      'Shaped core backend and frontend functionality as a founding engineer on the system.',
-      'Worked closely with business stakeholders to model domain workflows and edge cases.',
-      'Built reliable role-aware behavior across issue management, reviews, reassignments, and reporting support.',
+      'Owned the frontend structure and delivery: pages, navigation, and role-aware flows.',
+      'Built dashboards and statistics views for admins and operational visibility across status and throughput.',
+      'Collaborated on backend APIs and data modeling for task lifecycle, review decisions, and notifications.',
     ],
     outcomes: [
-      'Multi-stage workflow automation for issue review and resolution.',
-      'Audit-history and evidence handling aligned with operational reporting needs.',
-      'A scalable product foundation for business-critical data-quality processes.',
+      'End-to-end task state machine with approvals, rejections, and return loops back to operations.',
+      'Clear permission boundaries across five roles, plus audit-friendly history of status changes and decisions.',
+      'Automated email notifications and reminders to keep daily batches moving without manual follow-ups.',
     ],
   },
   {
@@ -191,13 +191,13 @@ export const projects: Project[] = [
     title: 'Analytical Data Workspace Platform',
     eyebrow: 'Data platform / dashboard workspace',
     summary:
-      'A workspace-style platform for retrieving, organizing, and analyzing large volumes of changing data through a structured, permissions-aware interface.',
+      'A multi-tenant analytical workspace where teams query, save, and analyze data pulled from constantly changing internal sources, with organization and workspace permissions.',
     challenge:
-      'The platform had to deal with shifting data sources, multiple integration points, and access rules that needed to stay clear for different organizations and workspace contexts.',
+      'The platform had to stay fast and usable while data sources changed daily, and it needed a clear permission model so analysts and managers could work safely across multiple organizations and workspaces.',
     solution:
-      'I owned many of the key technical decisions across frontend and backend structure, API communication, end-to-end testing, and the AWS-based architecture supporting querying, processing, and access control.',
+      'I owned the query builder/editor experience and the organization/workspace model. I built and iterated on the role-aware UX for querying and saving work, contributed to backend APIs for retrieving and processing data, and helped shape caching so common workloads stayed responsive. The system used an AWS serverless architecture (API Gateway + Lambdas), DynamoDB for document-style storage, PostgreSQL for relational data, and Terraform for repeatable deployments.',
     impact:
-      'The application gave users a more usable environment for exploring large data sets while improving control over organizations, workspaces, and user-level permissions.',
+      'Gave teams a secure, workspace-based way to explore and process data with clear access boundaries and reliable day-to-day querying, even as sources evolved.',
     role: 'Full-stack engineer with broad technical ownership',
     period: '2021 - Present',
     stack: [
@@ -209,24 +209,26 @@ export const projects: Project[] = [
       'API Gateway',
       'DynamoDB',
       'PostgreSQL',
+      'S3',
       'Terraform',
     ],
     categories: ['Data platforms', 'Dashboards'],
-    image: assetPath('/assets/projects/analytical-data-workspace.svg'),
+    image: assetPath('/assets/projects/media.png'),
     overview: [
       'Anonymized case study based on NDA-bound work.',
-      'Focused on querying and analyzing large, changing data sources in a usable business interface.',
-      'Built on AWS services with infrastructure managed through Terraform.',
+      'A multi-tenant workspace used by analysts and managers across organizations.',
+      'Query builder/editor with saved queries, backed by caching for responsive analysis.',
+      'Ingested and queried data from internal databases, APIs, and files that changed daily.',
     ],
     responsibilities: [
-      'Made key architecture and implementation decisions across the stack.',
-      'Designed organization and workspace concepts to support safer permissions and clearer usability.',
-      'Handled backend service structure, frontend delivery, integrations, and test strategy.',
+      'Owned the query builder/editor UX and the underlying query configuration model.',
+      'Designed and implemented organization/workspace entities for multi-tenant permissions and safer access control.',
+      'Contributed to backend APIs and performance work (caching + responsiveness) across a serverless AWS setup.',
     ],
     outcomes: [
-      'A dashboard-style workspace users could rely on for querying and analysis.',
-      'Safer access control through organizations and workspaces.',
-      'A flexible foundation for ongoing data-source and product changes.',
+      'A permissions-aware analytical workspace where teams can query, save, and reuse analysis safely.',
+      'Clear multi-tenant separation through organizations and workspaces, supporting both usability and security.',
+      'A flexible foundation that handled daily source changes without losing performance or clarity.',
     ],
   },
   {
@@ -234,32 +236,34 @@ export const projects: Project[] = [
     title: 'Energy Pricing Operations Dashboard',
     eyebrow: 'Operational dashboard / multi-country pricing',
     summary:
-      'A web application used by pricing analysts to track, compare, and manage site and product pricing across more than a dozen countries.',
+      'An internal platform for managing multi-country site and product pricing: scheduled price changes, offset tactics, competitor comparisons, and role-based control.',
     challenge:
-      'This type of product depends on accurate information, clear country-level context, and dependable workflows for pricing changes, product setup, and day-to-day analyst operations.',
+      'Pricing operations spanned 13+ countries with legal rules, currencies, and time zones, and the software needed to prevent invalid or out-of-bounds price changes while giving pricing managers clear visibility and control.',
     solution:
-      'As a frontend developer and tech lead, I worked on new product functionality, bug fixes, technical debt reduction, code coverage improvements, and one of the key flows for broader price changes across sites.',
+      'I led frontend architecture and implementation for two core workflows: General Pricing Change (scheduled price updates scoped by sites, time, products, and target prices) and Offset Tactics (live filtering and applying offsets across selected sites and products). These flows included validations against price endings, rule boundaries, and competitor context, with optional approvals, publish steps, and a history of changes. The platform integrated with a legacy pricing system and a third-party ingestion pipeline, and I contributed to backend rules around products, product groups, and pricing logic.',
     impact:
-      'The system supported pricing teams with clearer visibility into own and competitor prices, better product management flows, and a more maintainable frontend for continued delivery.',
+      'Enabled pricing teams to run day-to-day pricing operations through structured workflows and guardrails, with clearer auditability and significantly faster performance on key pages after targeted frontend work.',
     role: 'Frontend developer and tech lead',
     period: '2021 - Present',
     stack: ['React', 'TypeScript', 'Redux', 'MUI', 'Cypress', 'AWS'],
     categories: ['Dashboards', 'Operations tooling'],
-    image: assetPath('/assets/projects/energy-pricing-dashboard.svg'),
+    image: assetPath('/assets/projects/dashboard.png'),
     overview: [
       'Anonymized case study based on NDA-bound work.',
-      'Centered on pricing visibility and operational actions across multiple countries.',
-      'Built on AWS-backed microservices with a React and TypeScript frontend.',
+      'Internal pricing operations platform used across a global energy organization.',
+      'Guests, pricing analysts, and country/global admins with view-only and edit permissions.',
+      'Automated and manual pricing management with competitor comparison across 13+ countries.',
     ],
     responsibilities: [
-      'Led development on a major pricing-change flow.',
-      'Built dashboard features for price comparison and product management.',
-      'Improved code quality through issue resolution, technical debt reduction, and stronger coverage.',
+      'Owned frontend architecture and implementation for Offset Tactics and General Pricing Change workflows.',
+      'Built role-aware UI behavior and validation feedback for legal, currency, timezone, and boundary constraints.',
+      'Improved reliability and maintainability through technical debt reduction, unit/integration testing, and targeted refactors.',
+      'Delivered ~3x performance improvements on key pages through focused frontend optimization.',
     ],
     outcomes: [
-      'Better support for general price changes across sites.',
-      'Operational dashboards for analysts managing products and prices.',
-      'A sturdier frontend codebase for ongoing enhancements.',
+      'Scheduled bulk price changes with scope selection, optional approvals, publishing, and full change history.',
+      'Offset tactics allowing fast filtering and application of pricing strategies across sites and product groups.',
+      'Guardrails that reduce invalid changes (price endings, out-of-bounds updates, and timezone/currency conflicts).',
     ],
   },
 ]

@@ -1,25 +1,31 @@
-import { ArrowUpRight, Download, ExternalLink, Github, Linkedin } from "lucide-react";
-import { useState } from "react";
+import {
+  ArrowUpRight,
+  Download,
+  ExternalLink,
+  Github,
+  Linkedin,
+} from 'lucide-react'
+import { useState } from 'react'
 
-import { FadeIn } from "@/components/shared/fade-in";
-import { PageShell } from "@/components/shared/page-shell";
-import { SectionShell } from "@/components/shared/section-shell";
-import { Button } from "@/components/ui/button";
+import { FadeIn } from '@/components/shared/fade-in'
+import { PageShell } from '@/components/shared/page-shell'
+import { SectionShell } from '@/components/shared/section-shell'
+import { Button } from '@/components/ui/button'
 import {
   experienceHighlights,
   projectFilters,
   projects,
   projectCaseStudyHref,
-  siteContent
-} from "@/content/portfolio-content";
-import { cn } from "@/lib/utils";
+  siteContent,
+} from '@/content/portfolio-content'
+import { cn } from '@/lib/utils'
 
 export function HomePage() {
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState('All')
   const visibleProjects =
-    activeFilter === "All"
+    activeFilter === 'All'
       ? projects
-      : projects.filter((project) => project.categories.includes(activeFilter));
+      : projects.filter((project) => project.categories.includes(activeFilter))
 
   return (
     <PageShell homePage>
@@ -32,31 +38,41 @@ export function HomePage() {
           <p className="max-w-3xl text-lg leading-8 text-muted-foreground sm:text-xl">
             {siteContent.hero.description}
           </p>
-          <p className="text-sm text-muted-foreground">{siteContent.hero.meta}</p>
+          <p className="text-sm text-muted-foreground">
+            {siteContent.hero.meta}
+          </p>
         </FadeIn>
 
         <FadeIn delay={0.06} className="mt-14">
-          <div className="color-wash grid gap-6 rounded-[2rem] p-5 sm:p-6 lg:grid-cols-[5rem_minmax(0,1fr)_auto] lg:items-start lg:p-7">
+          <div className="color-wash grid gap-6 rounded-4xl p-5 sm:p-6 lg:grid-cols-[5rem_minmax(0,1fr)_auto] lg:items-start lg:p-7">
             <img
               className="h-16 w-16 rounded-full object-cover"
               src={siteContent.avatar.src}
               alt={siteContent.avatar.alt}
             />
             <div className="space-y-3">
-              <p className="text-sm font-medium text-foreground">{siteContent.hero.proof.title}</p>
+              <p className="text-sm font-medium text-foreground">
+                {siteContent.hero.proof.title}
+              </p>
               <p className="max-w-2xl text-base leading-7 text-muted-foreground">
                 {siteContent.hero.proof.description}
               </p>
             </div>
             <div className="flex flex-wrap gap-5 text-sm text-foreground lg:justify-end">
               <Button asChild size="sm">
-                <a href={siteContent.hero.primaryCta.href} target="_blank" rel="noreferrer">
+                <a
+                  href={siteContent.hero.primaryCta.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {siteContent.hero.primaryCta.label}
                   <ArrowUpRight className="h-4 w-4" />
                 </a>
               </Button>
               <Button asChild size="sm" variant="rose">
-                <a href={siteContent.hero.secondaryCta.href}>{siteContent.hero.secondaryCta.label}</a>
+                <a href={siteContent.hero.secondaryCta.href}>
+                  {siteContent.hero.secondaryCta.label}
+                </a>
               </Button>
             </div>
           </div>
@@ -88,8 +104,12 @@ export function HomePage() {
                 delay={index * 0.04}
                 className="grid gap-3 lg:grid-cols-[14rem_minmax(0,1fr)]"
               >
-                <h3 className="text-base font-medium text-foreground">{service.title}</h3>
-                <p className="max-w-2xl text-base leading-7 text-muted-foreground">{service.description}</p>
+                <h3 className="text-base font-medium text-foreground">
+                  {service.title}
+                </h3>
+                <p className="max-w-2xl text-base leading-7 text-muted-foreground">
+                  {service.description}
+                </p>
               </FadeIn>
             ))}
           </div>
@@ -114,8 +134,8 @@ export function HomePage() {
                   type="button"
                   className={`text-sm transition-colors ${
                     activeFilter === filter
-                      ? "text-primary"
-                      : "text-muted-foreground hover:text-foreground"
+                      ? 'text-primary'
+                      : 'text-muted-foreground hover:text-foreground'
                   }`}
                   onClick={() => setActiveFilter(filter)}
                 >
@@ -129,7 +149,10 @@ export function HomePage() {
                 delay={index * 0.05}
                 className="space-y-6"
               >
-                <a className="group block cursor-pointer space-y-6" href={projectCaseStudyHref(project)}>
+                <a
+                  className="group block cursor-pointer space-y-6"
+                  href={projectCaseStudyHref(project)}
+                >
                   <div className="space-y-4">
                     <div className="space-y-2">
                       <h3 className="text-[2rem] font-semibold tracking-[-0.035em] text-foreground sm:text-[2.35rem]">
@@ -147,17 +170,19 @@ export function HomePage() {
                         Read case study
                         <ArrowUpRight className="h-4 w-4" />
                       </span>
-                      <span className="text-muted-foreground">{project.impact}</span>
+                      <span className="text-muted-foreground">
+                        {project.impact}
+                      </span>
                     </div>
                   </div>
                   <div
                     className={cn(
-                      "block overflow-hidden rounded-[1.6rem]",
-                      index % 2 === 0 ? "color-wash-blue" : "color-wash-rose"
+                      'block overflow-hidden rounded-[1.6rem]',
+                      index % 2 === 0 ? 'color-wash-blue' : 'color-wash-rose',
                     )}
                   >
                     <img
-                      className="aspect-[16/10] h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.012]"
+                      className="aspect-video h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.012]"
                       src={project.image}
                       alt={`Placeholder project visual for ${project.title}`}
                     />
@@ -182,13 +207,19 @@ export function HomePage() {
                 className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_10rem]"
               >
                 <div className="space-y-2">
-                  <h3 className="text-[1.45rem] font-medium tracking-[-0.03em] text-foreground">{highlight.role}</h3>
+                  <h3 className="text-[1.45rem] font-medium tracking-[-0.03em] text-foreground">
+                    {highlight.role}
+                  </h3>
                   <p className="text-sm text-muted-foreground">
                     {highlight.company} · {highlight.period}
                   </p>
-                  <p className="max-w-3xl text-base leading-7 text-muted-foreground">{highlight.summary}</p>
+                  <p className="max-w-3xl text-base leading-7 text-muted-foreground">
+                    {highlight.summary}
+                  </p>
                 </div>
-                <p className="text-sm text-muted-foreground lg:pt-1 lg:text-right">{highlight.period}</p>
+                <p className="text-sm text-muted-foreground lg:pt-1 lg:text-right">
+                  {highlight.period}
+                </p>
               </FadeIn>
             ))}
           </div>
@@ -198,24 +229,31 @@ export function HomePage() {
       <SectionShell id="about" className="pt-10">
         <div className="grid gap-10 lg:grid-cols-[12rem_minmax(0,1fr)]">
           <FadeIn>
-            <h2 className="text-sm font-medium text-foreground">{siteContent.about.title}</h2>
+            <h2 className="text-sm font-medium text-foreground">
+              {siteContent.about.title}
+            </h2>
           </FadeIn>
           <FadeIn className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-start">
             <div className="space-y-5">
               {siteContent.about.paragraphs.map((paragraph) => (
-                <p key={paragraph} className="max-w-3xl text-base leading-8 text-muted-foreground sm:text-[1.06rem]">
+                <p
+                  key={paragraph}
+                  className="max-w-3xl text-base leading-8 text-muted-foreground sm:text-[1.06rem]"
+                >
                   {paragraph}
                 </p>
               ))}
-              <p className="text-sm text-foreground">{siteContent.about.note}</p>
+              <p className="text-sm text-foreground">
+                {siteContent.about.note}
+              </p>
             </div>
             <div className="space-y-5">
               <img
-                className="aspect-[4/5] w-full rounded-[1.7rem] object-cover"
+                className="aspect-4/5 w-full rounded-[1.7rem] object-cover"
                 src={siteContent.avatar.src}
                 alt={siteContent.avatar.alt}
               />
-              <div className="space-y-3 text-sm text-muted-foreground">
+              <div className="space-y-3 text-sm text-muted-foreground flex flex-col">
                 <a
                   className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
                   href={siteContent.contact.linkedin}
@@ -250,18 +288,27 @@ export function HomePage() {
       </SectionShell>
 
       <SectionShell id="contact" className="pb-20 pt-12 sm:pb-24">
-        <FadeIn className="color-wash space-y-5 rounded-[2rem] px-5 py-7 sm:px-7 sm:py-8">
+        <FadeIn className="color-wash space-y-5 rounded-4xl px-5 py-7 sm:px-7 sm:py-8">
           <p className="text-sm text-muted-foreground">Working on something?</p>
           <h2 className="max-w-3xl text-3xl font-semibold tracking-[-0.04em] text-foreground sm:text-[3.45rem] sm:leading-[1.05]">
             {siteContent.contact.title}
           </h2>
-          <p className="max-w-2xl text-base leading-7 text-muted-foreground">{siteContent.contact.description}</p>
+          <p className="max-w-2xl text-base leading-7 text-muted-foreground">
+            {siteContent.contact.description}
+          </p>
           <div className="flex flex-wrap items-center gap-5 pt-2 text-base">
-            <a className="transition-colors hover:text-primary" href={`mailto:${siteContent.contact.email}`}>
+            <a
+              className="transition-colors hover:text-primary"
+              href={`mailto:${siteContent.contact.email}`}
+            >
               {siteContent.contact.email}
             </a>
             <Button asChild>
-              <a href={siteContent.contact.calendar} target="_blank" rel="noreferrer">
+              <a
+                href={siteContent.contact.calendar}
+                target="_blank"
+                rel="noreferrer"
+              >
                 Book a Call
                 <ArrowUpRight className="h-4 w-4" />
               </a>
@@ -273,5 +320,5 @@ export function HomePage() {
         </FadeIn>
       </SectionShell>
     </PageShell>
-  );
+  )
 }

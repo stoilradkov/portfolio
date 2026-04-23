@@ -1,14 +1,19 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from 'lucide-react'
 
-import { siteContent } from "@/content/portfolio-content";
+import { siteContent } from '@/content/portfolio-content'
 
 export function SiteFooter() {
   return (
-    <footer className="lg:pl-[17.5rem]">
-      <div className="mx-auto flex w-full max-w-[61rem] flex-col gap-5 px-5 py-10 text-sm sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
-        <p className="text-muted-foreground">© {siteContent.name}. All rights reserved.</p>
+    <footer className="lg:pl-70">
+      <div className="mx-auto flex w-full max-w-244 flex-col gap-5 px-5 py-10 text-sm sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:px-8">
+        <p className="text-muted-foreground">
+          © {siteContent.name}. All rights reserved.
+        </p>
         <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
-          <a className="inline-flex items-center gap-2 hover:text-foreground" href={`mailto:${siteContent.contact.email}`}>
+          <a
+            className="inline-flex items-center gap-2 hover:text-foreground"
+            href={`mailto:${siteContent.contact.email}`}
+          >
             <Mail className="h-4 w-4" />
             Email
           </a>
@@ -41,5 +46,5 @@ export function SiteFooter() {
         </div>
       </div>
     </footer>
-  );
+  )
 }
