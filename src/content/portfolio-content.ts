@@ -86,7 +86,7 @@ export const siteContent = {
       'Most of my work has been in business-facing software where the hard part is not just building screens. It is understanding how people operate, how permissions and data flow through the system, and how the product needs to behave when the workflow gets messy.',
       'That has taken me across workflow portals, analytical platforms, pricing dashboards, configuration-heavy business software, and backend services that support real operational use. I work across frontend and full-stack delivery, and I care about making systems clear, dependable, and maintainable.',
     ],
-    note: 'AWS Certified Developer - Associate. 7+ years building production software.',
+    note: 'AWS Certified Developer - Associate (WBW00GBJHEREQB3N). 6+ years building production software.',
   },
   services: [
     {
