@@ -1,6 +1,6 @@
-# Stoil Radkov Portfolio
+# Portfolio
 
-Static portfolio site for Stoil Radkov.
+Static portfolio site.
 
 ## Stack
 
