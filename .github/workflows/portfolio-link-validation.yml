@@ -1,0 +1,27 @@
+name: Portfolio link validation
+
+on:
+  push:
+    branches:
+      - training/inspect-failed-workflow
+
+permissions:
+  contents: read
+
+jobs:
+  quality-gate:
+    name: quality-gate
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Run portfolio link checker
+        run: npm run check:links
