@@ -1,0 +1,45 @@
+name: Portfolio build check
+
+on:
+  push:
+    branches: ["test/portfolio-build-artifact"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint source
+        run: npm run lint
+
+      - name: Build portfolio
+        run: npm run build
+
+      - name: Check expected pages
+        run: |
+          test -f dist/index.html
+          test -f dist/work/insurance-workflow-portal/index.html
+          test -f dist/work/analytical-data-workspace/index.html
+          test -f dist/work/energy-pricing-dashboard/index.html
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-build
+          path: dist/
+          retention-days: 7
