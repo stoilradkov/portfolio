@@ -23,10 +23,10 @@ Why:
 
 Pages:
 
-- `/` homepage
-- `/work/insurance-workflow-portal/`
-- `/work/analytical-data-workspace/`
-- `/work/energy-pricing-dashboard/`
+- `/` — Homepage
+- `/work/insurance-workflow-portal/` — Insurance Workflow Portal
+- `/work/analytics-data-workspace/` — Analytical Data Workspace
+- `/work/energy-pricing-dashboard/` — Energy Pricing Dashboard
 
 ## Local development
 
